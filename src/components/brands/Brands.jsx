@@ -18,7 +18,7 @@ function Brands() {
         <img src={dropbox} alt="Dropbox logo" />
       </div>
       <div>
-        <img src={shopify alt="Shopify logo" />
+        <img src={shopify} alt="Shopify logo" />
       </div>
     </div>
   )
