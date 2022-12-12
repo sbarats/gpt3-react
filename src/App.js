@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { About, Blog, Features, Header, Possibility, Footer } from './containers';
-import { CTA, Brand, Navbar } from './components';
+import { CTA, Brands, Navbar } from './components';
 import './App.css';
+import './index.css';
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         <Navbar />
         <Header />
       </div>
-      <Brand />
+      <Brands />
       <About />
       <Features />
       <Possibility />
@@ -22,4 +23,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
