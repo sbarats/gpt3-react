@@ -5,7 +5,7 @@ import './about.css';
 function About() {
   return (
     <div className="gpt3__about section__margin" id="about">
-      <div className="gpt3__about-features">
+      <div className="gpt3__about-feature">
         <Feature title="About GPT-3" text="The architecture is a standard transformer network (with a few engineering tweaks) with the unprecedented size of 2048-token-long context and 175 billion parameters (requiring 800 GB of storage). The training method is generative pretraining, meaning that it is trained to predict what the next token is. The model demonstrated strong few-shot learning on many text-based tasks."/>
       </div>
       <div className="gpt3__about-heading">
