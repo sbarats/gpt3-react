@@ -51,6 +51,7 @@ a {
     margin: 4rem 6rem;
 }
 
+/*---Mobile Menu Animation---*/
 .scale-up-center {
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -76,6 +77,82 @@ a {
               transform: scale(1);
     }
   }
+
+  /*---BUTTON HOVER EFFECT W GRADIENT BACKGROUND---*/
+  /*https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+
+/* From the left */
+.slide:hover, .slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+/* Multiple shadows, one on the outside, another on the inside */
+.offset {  
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+}
+  
+  .offset:hover, .offset:focus {
+    box-shadow: 
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;  
+  font-family: var(--font-family);
+  color: #FF8A71;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  /* transition: 0.5s; */
+  border: 2px solid #FF8A71;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.slide::before {
+  content: "";
+  border-color: var(--gradient-text);
+  background: var(--gradient-text);
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  border-radius: 25px;
+}
+  
+  .slide:hover, .slide:focus { 
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .slide::before {
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+  }
+
+  .slide:hover::before {
+    width: 100%;
+    border-radius: 25px;
+  }
+
   
   /*---TABLET---*/
   @media screen and (max-width: 700px) {

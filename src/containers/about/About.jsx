@@ -10,7 +10,7 @@ function About() {
       </div>
       <div className="gpt3__about-heading">
         <h2 className="gradient__text">The possibilities are beyond your imagination</h2>
-        <p>Explore the library</p>
+        <button type="button" className="slide">Explore the library</button>
       </div>
       <div className="gpt3__about-container">
         <Feature title="Chatbots" text="GPT-3 has been used by Jason Rohrer in a retro-themed chatbot project named Project December, which is accessible online and allows users to converse with several AIs using GPT-3 technology."/>

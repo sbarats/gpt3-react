@@ -40,7 +40,15 @@
     line-height: 25px;
     text-transform: capitalize;
     margin: 0 1rem;
+    padding: 0.2rem 0.5rem;
     cursor: pointer;
+}
+
+.gpt3__navbar-links_container p:hover {
+    color: rgba(0, 40, 83, 1);
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
 }
 
 .gpt3__navbar-sign button, .gpt3__navbar-menu_container button {
@@ -55,6 +63,12 @@
     border: 0;
     outline: none;
     cursor: pointer;
+    margin-top: 0px;
+}
+
+.gpt3__navbar-sign button:hover, .gpt3__navbar-menu_container button:hover {
+    background: #fff;
+    color: #FF4820;
 }
 
 .gpt3__navbar-menu {
